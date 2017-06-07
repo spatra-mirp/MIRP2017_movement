@@ -2,13 +2,13 @@ int displayWidth=500, displayHeight=500;
 
 float MAX_VELOCITY = 10;
 
-float bgColor = 0;
+float bgColor = 255;
 
 float gravity = 0.25;
 float ballX, ballY;
 float ballVx = 0, ballVy = 0;
 float ballRadius = 10;
-float ballColor = 255;
+color ballColor = color(100, 180, 70, 150);
 
 float restitutionCoeff = 0.95;
 
@@ -27,6 +27,7 @@ void setup() {
 
 void draw() {
   background(bgColor);
+  detectKeys();
   drawBall();
   updateBallVelocity();
   updateBallPosition();

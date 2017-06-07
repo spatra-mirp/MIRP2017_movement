@@ -9,3 +9,13 @@ void keyReleased() {
   if (key == LEFT)     left = false;
   if (key == RIGHT)    right = false;
 }
+
+float radiusIncrement = 0.5;
+
+void detectKeys() {
+  println(ballRadius);
+  if (left)
+    ballRadius = ballRadius - radiusIncrement;
+  if (right) 
+    ballRadius=ballRadius + radiusIncrement;
+}
